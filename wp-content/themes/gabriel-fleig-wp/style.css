@@ -1,0 +1,13 @@
+/*
+Theme Name: Gabriel Fleig
+Theme URI: http://exemplo.com
+Author: Paulo
+Author URI: http://exemplo.com
+Description: Tema WordPress baseado no HTML/CSS original de Gabriel Fleig.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gabriel-fleig
+*/
+
+@import url("./css/style.css");
