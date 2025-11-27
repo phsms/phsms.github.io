@@ -1,0 +1,677 @@
+/*
+Theme Name: 1990fleig
+Theme URI: http://exemplo.com
+Author: Gabriel Fleig
+Author URI: http://exemplo.com
+Description: Tema WordPress baseado no HTML/CSS original de Gabriel Fleig.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gabriel-fleig
+*/
+
+
+body {
+    background-color: black;
+    background-image: url("./../img/bg.psng");
+    background-size: 50px;
+}
+
+img {
+    margin-top: 5px;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.side{
+    width: 15%;
+    float: left;
+}
+
+.defacto{
+    width: 83%;
+    float: right;    
+    margin-top: 10px;
+    
+}
+
+.container-interna article {
+    background-color: #101010;
+}
+
+.defacto header h1 a{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline white;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    margin-top: 0px;
+}
+
+
+.lateral .menu nav ul {
+  padding: 0;
+  border: 4px double #fff;
+}
+
+.lateral .menu nav ul li {
+  padding: 10px;
+  list-style-type: none;
+  border-bottom: double #fff;
+  margin: 0px 0 1px 0;
+}
+
+.lateral .menu nav ul li:last-child {
+  border-bottom: none;
+}
+
+.lateral .menu nav ul li a {
+  color: #d20000;
+  font-size: 16px;
+}
+
+.lateral .menu nav ul li a:hover {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+.entry-content h2 {
+    color: white;
+}
+
+
+b {
+    color: darkred;
+}
+
+i {
+    color:deeppink
+}
+
+p {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 18px;
+    font-size: 16px;
+}
+
+h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    margin-top: 0px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    color: white;
+}
+
+
+/* Unvisited link (Seu vermelho sangue original) */
+a:link {
+   color: #d20000;
+   text-decoration: none;
+}
+
+/* Visited link: 
+   Mudei para um "Vermelho Ferrugem/Cobre" (#bf6060).
+   Ele é mais claro e desbotado que o original, garantindo leitura perfeita no preto,
+   mas indicando claramente que é um link "velho". */
+a:visited {
+    color: #bf6060; 
+}
+
+/* Mouse over link: 
+   Mantive o Vermelho Neon/Tomate para "acender" na hora. */
+a:hover {
+    color: #ff5555;
+    text-decoration: underline;
+}
+  
+/* Selected link: Branco */
+a:active {
+  color: #ffffff;
+}
+
+.area-widgets div figure{
+margin: 0;
+}
+
+.area-widgets div figure img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+:root {
+  --shadow-color: #ff0000;
+  --shadow-color-light: white;
+}
+
+a.logo-1 {
+  margin: 0 auto;
+  font-size: 65px;
+  font-weight: normal;
+  display: block;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+}
+a.logo-1:hover {
+    background: none;
+}
+
+
+/* unvisited link */
+a.logo-1:link, a.logo-1:visited, a.logo-1:active {
+  color: white;
+}
+
+
+.logo-1 {
+  color: white;
+  animation: neon 1s infinite;
+}
+
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+
+
+
+/* Estilo do Container Geral */
+    .retro-counter-wrapper {
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 20px;
+        background-color: #c0c0c0; /* Aquele cinza clássico do Windows 95 */
+        padding: 0px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+        display: inline-block;
+    }
+
+    .retro-label {
+        font-size: 10px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 2px;
+        letter-spacing: 1px;
+    }
+
+    /* A caixa preta onde ficam os números */
+    .counter-display {
+        background-color: #000;
+        color: #ff0000; /* Vermelho Digital (mude para #0f0 para verde Matrix) */
+        font-size: 22px;
+        font-weight: bold;
+        padding: 2px 8px;
+        letter-spacing: 3px;
+        border-top: 2px solid #888;
+        border-left: 2px solid #888;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        text-shadow: 0 0 5px #ff0000; /* Um leve brilho neon retrô */
+    }
+
+
+
+
+
+/* =========================================
+   GALERIA RETRÔ - THUMBNAILS 150x150
+   ========================================= */
+
+/* O Container da Galeria */
+.wp-block-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha */
+    justify-content: center; /* Centraliza as imagens na tela */
+    gap: 15px; /* Espaço entre as miniaturas */
+    padding: 15px;
+    background-color: #111; /* Fundo escuro para destacar */
+    border: 2px solid #444; /* Borda pontilhada rústica */
+    margin-bottom: 30px;
+}
+
+/* A Moldura (O quadrado de 150px) */
+.wp-block-gallery .wp-block-image {
+    width: 160px !important;
+    flex: 0 0 160px !important;
+    margin: 5px;
+    padding: 0px 8px 4px 6px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 4px solid #555;
+    border-bottom: 4px solid #555;
+    background-color: #c0c0c0;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+/* A Imagem dentro da moldura */
+.wp-block-gallery .wp-block-image img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover; /* CORTA a imagem para caber no quadrado sem esticar */
+    border: 1px solid #000; /* Borda fina interna */
+    display: block;
+}
+
+.wp-block-image figcaption {
+    margin: 4px 0;
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.wp-block-image .aligncenter img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* =========================================
+   INTERAÇÃO
+   ========================================= */
+
+/* Ao passar o mouse */
+.wp-block-gallery .wp-block-image:hover {
+    /* Troca a cor da moldura para o seu Vermelho ao passar o mouse */
+    border-color: #d20000;
+    background-color: #d20000;
+    cursor: pointer;
+}
+
+/* Ajuste para telas pequenas (Celular) */
+@media (max-width: 600px) {
+    .wp-block-gallery .wp-block-image {
+        width: 100px !important;
+        height: 100px !important;
+        flex: 0 0 100px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container da Lista de Downloads */
+.download-repository {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* O Cartão do Software */
+.software-card {
+    background-color: #000;
+    border: 2px solid #fff; /* Borda branca externa */
+    width: 100%;
+    max-width: 400px; /* Largura máxima de cada caixa */
+    font-family: 'Courier New', monospace; /* Fonte técnica/hacker */
+    box-shadow: 5px 5px 0px #333; /* Sombra dura retrô */
+    margin-bottom: 20px;
+}
+
+/* Cabeçalho do Cartão */
+.soft-header {
+    background-color: #d20000; 
+    color: #fff;
+    padding: 10px;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soft-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white; /* Garante que o título seja branco */
+}
+
+.soft-header .version {
+    background: #000;
+    color: #d20000;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Conteúdo interno */
+.soft-content {
+    padding: 15px;
+    color: #ccc;
+}
+
+.soft-specs {
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.wp-block-buttons {
+    display: grid;
+    margin: 40px;
+}
+
+.wp-block-buttons .wp-block-button a {
+    display: inline;
+    padding: 10px 20px;
+}
+
+/* O Botão de Download */
+.btn-download, .wp-block-button a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #c0c0c0; /* Cinza Windows 95 */
+    color: #000 !important; /* Texto preto forçado */
+    padding: 10px 0;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    margin-top: 15px;
+    transition: all 0.1s;
+}
+
+/* Efeito ao clicar no botão (afunda) */
+.btn-download:active, .wp-block-button a:active {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translate(1px, 1px);
+}
+
+.btn-download:hover, .wp-block-button a:hover {
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   LISTA DE PUBLICAÇÕES ACADÊMICAS (RETRÔ)
+   ========================================= */
+
+.academic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre artigos */
+}
+
+/* O Cartão do Artigo */
+.pub-item {
+    display: flex;
+    background-color: #050505; /* Quase preto */
+    border: 1px solid #333;
+    border-left: 6px solid #d20000; /* A faixa vermelha lateral grossa */
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+.pub-item:hover {
+    background-color: #111; /* Efeito hover sutil */
+    border-color: #555;
+    border-left-color: #ff0000; /* Vermelho acende */
+}
+
+/* O Badge do Ano (Esquerda) */
+.pub-year-badge {
+    background-color: #1a1a1a;
+    color: #d20000;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #333;
+    min-width: 80px;
+    transform: rotate(180deg); /* Um toque de design: texto vertical */
+    writing-mode: vertical-rl; 
+}
+
+/* Informações (Direita) */
+.pub-info {
+    padding: 15px 20px;
+    flex-grow: 1;
+}
+
+/* Título do Artigo */
+.pub-title {
+    margin: 0 0 10px 0;
+    font-family: 'Times New Roman', serif; /* Fonte Acadêmica */
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.pub-title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    color: #d20000;
+    text-decoration: underline;
+}
+
+/* Nome da Revista/Conferência */
+.pub-meta .journal-name {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+}
+
+/* Resumo do Artigo */
+.pub-abstract {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #ccc;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+/* O Link final */
+.link-lattes {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #d20000 !important;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.link-lattes:hover {
+    color: #fff !important;
+    text-decoration: none;
+    background-color: #d20000;
+    padding: 2px 5px; /* Efeito marca-texto */
+}
+
+/* Responsivo para Celular */
+@media (max-width: 600px) {
+    .pub-item {
+        flex-direction: column;
+        border-left: 1px solid #333;
+        border-top: 6px solid #d20000; /* A faixa vai para o topo no celular */
+    }
+    .pub-year-badge {
+        writing-mode: horizontal-tb;
+        transform: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #333;
+        padding: 5px;
+    }
+}
+
+
+
+
+
+/* =========================================
+   GRID DE PROJETOS (ESTILO TERMINAL)
+   ========================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* O Cartão Terminal */
+.terminal-card {
+    background-color: #000;
+    border: 1px solid #444;
+    font-family: 'Courier New', monospace;
+}
+
+
+
+.terminal-body {
+    padding: 20px;
+}
+
+.proj-title {
+    color: #fff;
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+}
+
+.proj-stack {
+    color: #d20000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.proj-desc {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.proj-desc p { margin: 0; }
+
+/* Botão do GitHub */
+.btn-git {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #fff;
+    color: #fff !important;
+    padding: 8px 0;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-git:hover {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+.proj-title::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+.wp-block-code {
+    background-color: #101010;
+    border: 1px solid #333;
+    border-radius: 0;
+    margin: 30px 0;
+    position: relative;
+}
+
+.wp-block-code code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    padding: 20px;
+    display: block;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.wp-block-code code::-webkit-scrollbar {
+    height: 6px; /* Mais fina */
+    background-color: #000;
+}
+
+.wp-block-code code::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+.wp-element-caption {
+    color: #CCC; 
+    font-size: 14px; 
+    font-family: 'Courier New', monospace; 
+    text-align: center;
+    margin-top: 8px;    
+    margin-bottom: 25px; 
+    font-style: italic; 
+    line-height: 1.4;
+}

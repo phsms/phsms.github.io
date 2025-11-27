@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8">
+        
+        <title>paulo HSMS</title>
+        <link rel="stylesheet" type="text/css" href="./../../../../wp-content/themes/1990-fleig/style.css">
+        <meta name="viewport" content="width=device-width">
+        </head>
+
+        <body style="background: url(./../../../../wp-content/uploads/2025/11/universe-anim.gif);">
+
+    
+
+    <div class="content">     
+        <div>
+            <a href="./../../../../index.html" class="logo-1">paulo HSMS</a>
+            <h2 style="color: darkred; text-align: center;">
+                Born to Teach ♠ Live to Learn            </h2>  
+                                    
+                    <img src="./../../../../wp-content/uploads/2025/11/animated-smiley-line.gif" width="100%" style="float: left; margin-bottom: 5px;">
+
+                        </div>   
+            
+        <div>  
+
+            <div class="side">
+                <div class="lateral">
+                    <div class="menu">
+                        <nav class="menu-menu-principal-container"><ul id="menu-menu-principal" class=""><li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a href="https://orcid.org/0000-0002-3713-5190">ORCID</a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="http://lattes.cnpq.br/8708060196779501">Lattes</a></li>
+<li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="./../../../../projetos/index.html">Projetos</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="./../../../../publicacoes/index.html">Publicações</a></li>
+<li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="./../../../../flauta-doce/index.html">Flauta Doce</a></li>
+<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="./../../../../galeria/index.html">Galeria</a></li>
+<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="./../../../../downloads/index.html">Downloads</a></li>
+</ul></nav>                    </div>
+                    <aside class="area-widgets">
+                        
+                                                    
+                            <div id="block-8" class="widget widget_block"><img decoding="async" src="./../../../../wp-content/uploads/2025/11/peixe-paulo2.jpg" onmouseover="this.src='.//wp-content/uploads/2025/11/peixe-paulo1.jpg'" onmouseout="this.src='.//wp-content/uploads/2025/11/peixe-paulo2.jpg'" style="width: 100%;
+    alt=" paulo com um peixe de tamanho duvidoso.></div><div id="block-10" class="widget widget_block widget_media_image">
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="380" height="430" src="./../../../../wp-content/uploads/2025/11/phsms1.gif" alt="" class="wp-image-52"></figure>
+</div><div id="block-12" class="widget widget_block widget_text">
+<p></p>
+</div>                        
+                        
+                    </aside>
+                </div>
+
+                <div class="retro-counter-wrapper">
+                    <span class="retro-label">VISITAS:</span>
+                    <div id="retro-counter" class="counter-display">
+                        Loading...
+                    </div>
+                </div>
+            </div>
+                
+                <div class="posts-container container-interna">
+                    
+                    
+                        <article id="post-133" class="defacto post-133 post type-post status-publish format-standard hentry category-sem-categoria">
+                            
+                            <header class="entry-header">
+                                <h1>
+                                        Como criei este site (e por que o elementor deu zebra)                                   
+                                </h1>
+                            </header>
+
+                            <div class="entry-content">
+                                
+<p>Como você pode ver, esse site está hospedado no githubpages e apresenta o seu conteúdo através do HTML estático, sem banco de dados para o que está aqui, agora. Mas, fato é que este site foi feito no WordPress que está rodando em um ambiente local e o que está sendo exibido aqui é apenas a versão HTML/CSS/JS que foi exportada desse site wordpress local.</p>
+
+
+
+<h2 class="wp-block-heading">O plano inicial</h2>
+
+
+
+<p>Eu sabia que não iria realizar atualizações constantes nesse site, por experiência própria, uma rotina de atualizações não é meu forte, então eu pensei que poderia manter o sistema funcionando de forma estática e hospedá-lo no <a href="https://docs.github.com/pt/pages">GithubPages</a> foi uma boa ideia, já que não há tanta necessidade de manutenção e sem risco de invasão de banco de dados (já que ele só existe localmente).</p>
+
+
+
+<p> E como ia ser estático, lembrei imediatamente da internet dos anos 1990 e 2000, com a estética característica dos Geocities e Altavista, era esse o plano. Fiz um protótipo de tecnologia para testar o processo de exportar um site WP para html e após testar alguns plugins, gostei do <a href="https://br.wordpress.org/plugins/simply-static/">Simply Static</a>.</p>
+
+
+
+<h2 class="wp-block-heading">A tentativa com o Elementor</h2>
+
+
+
+<p>Minha primeira tentativa foi usando o Elementor para construir o tema, mas na hora de exportar o resultado criado no Elementor para HTML usando o Simply Static, o sistema demorava uma eternidade, e quando eu ia investigar o arquivo exportado, eu notava a a presença de centenas de arquivos desnecessários, que estavam lá apenas por fazerem parte do Elementor.</p>
+
+
+
+<p>Testei com um tema padrão e o resultado foi muito mais rápido e eficiente. O grande volume de arquivos sem necessidade e a demora para exportar a versão estática me fizeram desistir do Elementor e partir para a abordagem mais tradicional do tema próprio.</p>
+
+
+
+<h2 class="wp-block-heading">Criando o tema WP</h2>
+
+
+
+<p>O processo de criação do tema WP foi bem simples, peguei o arquivo HTML/CSS estático do site do Motorhead de Gabriel Fleig e transformei em tema, separando o arquivo index.html em head.php, index.php, footer.php e inserindo as funções dinâmicas do wordpress nesse processo de separação e montagem. Depois criei o single.php e adicionei o cabeçalho obrigatório no style.css: </p>
+
+
+
+<pre class="wp-block-code"><code>/*
+Theme Name: 1990fleig
+Author: Fleig
+Description: Tema WordPress baseado no HTML/CSS original de Fleig.
+Version: 1.0
+License: GNU General Public License v2 or later
+*/</code></pre>
+
+
+
+<p>Adicionei algumas funções no functions.php para registrar o menu, personalizar alguns recursos e facilitar a inserção de alguns conteúdos e voilá!, o site estava pronto. Restando apenas inserir o conteúdo e exportar usando o Simply Static.</p>
+
+
+
+<h2 class="wp-block-heading">Hospedagem no GithubPages</h2>
+
+
+
+<p>Uma vez exportado, o resultado final do Simply Static é uma pasta com um conjunto de arquivos dentro, HTML, CSS e as imagens, tudo que eu preciso fazer com isso é enviar para o repositório do Github, e ele se encarrega de publicar.</p>
+
+
+
+<p>O pulo do gato é que <strong>a configuração do repositório no github precisa seguir uma convenção</strong>, ao criar um novo repositório tem que usar a nomenclatura: meu-usuario.github.io. Quando se cria um repositório com o nome do usuário seguido de .github.io o github entende que deve criar ali a raiz de um site e não apenas o código avulso.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="376" height="291" src="./../../../../wp-content/uploads/2025/11/repository.jpg" alt="" class="wp-image-134"><figcaption class="wp-element-caption">Detalhe do nome do repositório com o github.io</figcaption></figure></div>
+
+
+<p>Com essa abordagem, você tem a facilidade do WordPress rodando seguro no seu PC local, e a performance do HTML estático rodando na web. O site não cai, carrega rapidinho e não custa nada.</p>
+                            </div>
+
+                        </article>
+
+                    
+                    <div class="pagination">
+                                            </div>
+
+                </div>
+
+            
+
+
+   
+            <div style="max-height: 50px; clear: both;">
+                <center><img src="./../../../../wp-content/themes/1990-fleig/img/construction2.GIF"> <br></center>
+            </div>
+        </div>   
+    </div>          
+    </body>
+
+    <script>
+        (function() {
+            // 1. Defina um número inicial para não começar do zero (truque dos anos 90)
+            // Coloquei 14520 para parecer que o site já é famoso!
+            const startCount = 14520; 
+
+            // 2. Tenta pegar a contagem atual do navegador
+            let currentCount = localStorage.getItem('retro_page_counter');
+
+            // Se não tiver contagem ainda, usa o número inicial
+            if (!currentCount) {
+                currentCount = startCount;
+            } else {
+                // Se já tiver, converte para número e soma +1
+                currentCount = parseInt(currentCount) + 1;
+            }
+
+            // 3. Salva o novo número
+            localStorage.setItem('retro_page_counter', currentCount);
+
+            // 4. Formata o número para ter sempre 6 dígitos (Ex: 014521)
+            // Isso era OBRIGATÓRIO nos anos 90
+            const formattedCount = currentCount.toString().padStart(6, '0');
+
+            // 5. Exibe na tela
+            document.getElementById('retro-counter').innerText = formattedCount;
+        })();
+
+
+
+    </script>
+
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/phsms\/*"},{"not":{"href_matches":["\/phsms\/wp-*.php","\/phsms\/wp-admin\/*","\/phsms\/wp-content\/uploads\/*","\/phsms\/wp-content\/*","\/phsms\/wp-content\/plugins\/*","\/phsms\/wp-content\/themes\/1990-fleig\/*","\/phsms\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+</html>
