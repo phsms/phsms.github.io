@@ -675,3 +675,49 @@ a.logo-1:link, a.logo-1:visited, a.logo-1:active {
     font-style: italic; 
     line-height: 1.4;
 }
+
+/* =========================================
+   EFEITO PEIXE (DIMENSÕES EXATAS 364x528)
+   ========================================= */
+
+.efeito-peixe {
+    display: block;
+    
+    /* 1. Largura Responsiva Inteligente */
+    width: 100%;       /* Ocupa o espaço disponível no celular */
+    max-width: 364px;  /* Mas TRAVA no tamanho real da foto (não estica mais que isso) */
+    
+    /* 2. Proporção Matemática Exata 
+       O navegador calcula a altura sozinho baseado nesses números. */
+    aspect-ratio: 364 / 528; 
+    
+    /* 3. Centralizar o bloco (caso a coluna seja mais larga que a foto) */
+    margin: 0 auto; 
+    
+    /* 4. Configuração do Background */
+    background-size: cover; /* Garante preenchimento total */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Imagem Padrão (Normal) */
+    background-image: url('./img/peixe-paulo2.jpg');
+    
+    cursor: pointer;
+    /* Removemos a transição suave 'fade' porque troca de imagem via CSS 
+       às vezes pisca se tiver transição de opacidade/imagem misturada. 
+       Troca seca (instantânea) costuma ficar melhor nesse estilo retrô. */
+}
+
+/* 5. O Hover (Troca a imagem) */
+.efeito-peixe:hover {
+    background-image: url('./img/peixe-paulo1.jpg');
+}
+
+/* 6. PRELOAD (Essencial para não piscar branco na primeira vez) */
+.efeito-peixe::after {
+    content: url('./img/peixe-paulo1.jpg');
+    display: none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
