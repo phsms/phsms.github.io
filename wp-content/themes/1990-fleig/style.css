@@ -1,5 +1,5 @@
 /*
-Theme Name: 1990fleig
+Theme Name: 1990fleig2026
 Theme URI: http://exemplo.com
 Author: Gabriel Fleig
 Author URI: http://exemplo.com
@@ -546,6 +546,122 @@ a.logo-1:link, a.logo-1:visited, a.logo-1:active {
     padding: 2px 5px; /* Efeito marca-texto */
 }
 
+/* --- Publicações via ORCID: filtros, carregamento, ano, autores e tipo --- */
+
+.academic-list [hidden],
+.pub-filters[hidden],
+.orcid-status[hidden] {
+    display: none;
+}
+
+/* Botões de filtro (cinza Windows 95, como .btn-download) */
+.pub-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.pub-filter {
+    background-color: #c0c0c0;
+    color: #000;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.pub-filter:hover {
+    background-color: #fff;
+}
+
+/* Filtro ativo: botão "afundado" no vermelho do tema */
+.pub-filter[aria-pressed="true"] {
+    background-color: #d20000;
+    color: #fff;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.pub-filter:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.pub-filter-count {
+    font-weight: normal;
+}
+
+/* Mensagem de carregamento / aviso de erro */
+.orcid-status {
+    color: #ccc;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    border: 1px dashed #333;
+    background-color: #050505;
+    padding: 15px 20px;
+}
+
+.orcid-status:not(.orcid-status--error)::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+/* Agrupamento por ano */
+.pub-year-group,
+.pub-year-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pub-year-heading {
+    color: #d20000;
+    font-family: 'Courier New', monospace;
+    font-size: 1.4rem;
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 4px;
+}
+
+/* Linha de metadados: autores, revista e selo de tipo */
+.pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 10px;
+}
+
+.pub-meta .pub-authors {
+    flex-basis: 100%;
+    color: #ccc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.pub-meta .pub-authors strong {
+    color: #fff;
+}
+
+.pub-meta .pub-type {
+    color: #d20000;
+    border: 1px solid #d20000;
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1px 6px;
+}
+
 /* Responsivo para Celular */
 @media (max-width: 600px) {
     .pub-item {
@@ -564,6 +680,192 @@ a.logo-1:link, a.logo-1:visited, a.logo-1:active {
 }
 
 
+
+
+
+/* Selo "Novo" (Publicações e Atividades) */
+.selo-novo {
+    background-color: #d20000;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1px 6px;
+}
+
+
+
+/* =========================================
+   ATIVIDADES (PÁGINA INICIAL E HISTÓRICO)
+   ========================================= */
+
+.activity-feed {
+    margin-bottom: 30px;
+}
+
+.activity-feed[hidden],
+.activity-list-wrap [hidden] {
+    display: none;
+}
+
+.activity-feed-title {
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #333;
+}
+
+.activity-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Cada tipo define sua cor em --cor */
+.activity-item {
+    --cor: #d20000;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: #050505;
+    border: 1px solid #333;
+    border-left: 6px solid var(--cor);
+    padding: 12px 15px;
+    transition: background-color 0.2s;
+}
+
+.activity-item:hover {
+    background-color: #111;
+    border-color: #555;
+    border-left-color: var(--cor);
+}
+
+.activity-item--publicacao    { --cor: #d20000; }
+.activity-item--dados         { --cor: #00b7c3; }
+.activity-item--citacao       { --cor: #ff8c00; }
+.activity-item--premio        { --cor: #ffd700; }
+.activity-item--vinculo       { --cor: #a06cff; }
+.activity-item--financiamento { --cor: #2ecc40; }
+.activity-item--github        { --cor: #c0c0c0; }
+.activity-item--manual        { --cor: deeppink; }
+
+/* Ícone quadrado com o símbolo do tipo */
+.activity-icon {
+    flex: 0 0 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border: 2px solid var(--cor);
+    color: var(--cor);
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.activity-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    color: var(--cor);
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.activity-title {
+    margin: 0;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.activity-title a:link,
+.activity-title a:visited {
+    color: #fff;
+}
+
+.activity-title a:hover {
+    color: #d20000;
+    text-decoration: underline;
+}
+
+.activity-desc {
+    margin: 4px 0 0 0;
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.activity-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    margin-top: 6px;
+    color: #888;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.85rem;
+}
+
+.activity-origin {
+    font-style: italic;
+}
+
+.activity-meta time {
+    font-family: 'Courier New', monospace;
+}
+
+.activity-more {
+    margin: 12px 0 0 0;
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Histórico: um bloco por mês */
+.activity-month {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+    .activity-item {
+        gap: 10px;
+        padding: 10px;
+    }
+    .activity-icon {
+        flex-basis: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+    .activity-more {
+        text-align: left;
+    }
+}
 
 
 
@@ -714,4 +1016,78 @@ a.logo-1:link, a.logo-1:visited, a.logo-1:active {
 /* 5. O Hover: Move o background para a DIREITA (100%) */
 .efeito-peixe:hover {
     background-position: 0% 0%;
+}
+
+
+
+/* =========================================
+   VERSÃO MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Respiro nas laterais para o conteúdo não colar na borda da tela */
+    .content {
+        padding: 0 15px;
+    }
+
+    /* Logo menor para não estourar a largura da tela */
+    a.logo-1 {
+        font-size: 40px;
+    }
+
+    /* Sidebar e conteúdo deixam de ser colunas e ocupam a largura toda */
+    .side,
+    .defacto {
+        width: 100%;
+        float: none;
+    }
+
+    .side {
+        clear: both;
+    }
+
+    .posts-container {
+        clear: both;
+    }
+
+    /* Menu na horizontal, mantendo a moldura dupla original */
+    .lateral .menu nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+
+    .lateral .menu nav ul li {
+        flex: 1 1 auto;
+        text-align: center;
+        margin: 0;
+        border-bottom: none;
+        border-right: double #fff;
+    }
+
+    .lateral .menu nav ul li:last-child {
+        border-right: none;
+    }
+
+    /* Itens da sidebar ocultos no celular */
+    .area-widgets,
+    .retro-counter-wrapper {
+        display: none;
+    }
+
+    /* Evita que mídia e grids estourem a tela */
+    .entry-content img,
+    .content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    }
+
+    .wp-block-buttons {
+        margin: 20px 0;
+    }
 }
